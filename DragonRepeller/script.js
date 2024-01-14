@@ -74,6 +74,12 @@ const locations = [
 
 ];
 
+// initialize buttons
+
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
+
 function update(location) {
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
@@ -144,9 +150,7 @@ function sellWeapon() {
   }
 }
 
-function fightDragon() {
-  console.log("Fighting dragon");
-}
+
 
 function fightSlime() {
   fighting = 0;
@@ -154,14 +158,23 @@ function fightSlime() {
 }
 
 function fightBeast() {
+  fighting = 1;
+  goFight();
+}
 
+function fightDragon() {
+  fighting = 2;
+  goFight();
 }
 
 function goFight() {
+  
+}
+
+function attack(){
 
 }
-// initialize buttons
 
-button1.onclick = goStore;
-button2.onclick = goCave;
-button3.onclick = fightDragon;
+function dodge(){
+  
+}
